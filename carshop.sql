@@ -40,3 +40,46 @@ VALUES ('9', 'Automatické svícení', 'automatickeosviceni');
 
 INSERT INTO accesory (id, name, description)
 VALUES ('10', 'Kožená sedadla', 'kozenasedadla');
+
+ALTER TABLE garage
+ADD FOREIGN KEY (car_id);
+
+UPDATE garage
+SET car_id = 1
+WHERE id = 1;
+
+UPDATE garage
+SET car_id = 1
+WHERE id = 2;
+
+UPDATE garage
+SET car_id = 2
+WHERE id = 3;
+
+UPDATE garage
+SET car_id = 2
+WHERE id = 4;
+
+UPDATE garage
+SET car_id = 7
+WHERE id = 5;
+
+UPDATE garage
+SET car_id = 7
+WHERE id = 6;
+
+UPDATE garage
+SET car_id = 5
+WHERE id = 7;
+
+UPDATE garage
+SET car_id = 5
+WHERE id = 8;
+
+UPDATE garage
+SET car_id = 9
+WHERE id = 9;
+
+UPDATE garage
+SET car_id = 9
+WHERE id = 10; 
