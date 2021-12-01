@@ -83,3 +83,18 @@ WHERE id = 9;
 UPDATE garage
 SET car_id = 9
 WHERE id = 10; 
+SELECT *
+FROM employee e
+LEFT JOIN car c ON e.car_id = c.id;
+UPDATE employee 
+SET car_id = NULL 
+WHERE id = 1;
+SELECT e.firstname, e.lastname, c.manufacturer, c.model
+FROM employee e
+JOIN car c ON e.car_id = c.id;
+SELECT e.firstname, e.lastname, e.email, e.phone, c.manufacturer, c.model
+FROM employee e
+LEFT JOIN car c ON e.car_id = c.id;
+SELECT c.manufacturer, c.model, g.name, g.gps_x, g.gps_y
+FROM car c
+LEFT JOIN garage g ON c.garage_id = g.id
