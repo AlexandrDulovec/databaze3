@@ -145,4 +145,4 @@ VALUES
 SELECT c.model,c.manufacturer,a.name,a.description,c.id
 FROM car c
 LEFT JOIN car_accessory c_a ON c.id =c_a.car_id
-LEFT JOIN accessory a ON c.id=c_a.accessory_id 
+LEFT JOIN accessory a ON a.id = c_a.accessory_id;
