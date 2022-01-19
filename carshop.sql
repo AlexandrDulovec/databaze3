@@ -150,4 +150,5 @@ LEFT JOIN accessory a ON a.id = c_a.accessory_id;
 SELECT a.name, c.id, c.manufacturer, c.model, c.spz
 FROM accesory a 
 JOIN car c ON c.id = a.id
+JOIN c_a ON a.id = c.id
 WHERE a.name LIKE "Wifi%"
